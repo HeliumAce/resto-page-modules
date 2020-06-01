@@ -1,4 +1,4 @@
-const displayContent = () => {
+const displayAbout = () => {
     createDivs();
     displayHeader();
     displayMainContent();
@@ -71,4 +71,4 @@ const displayAboutText = () => {
 
 }
 
-export { displayContent };
+export { displayAbout  };
