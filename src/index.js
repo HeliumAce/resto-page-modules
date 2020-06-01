@@ -1,1 +1,3 @@
-console.log('Everything is fine');
+import { displayContent } from './page-load'
+
+displayContent();
