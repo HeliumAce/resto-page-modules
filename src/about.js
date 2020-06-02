@@ -40,7 +40,7 @@ const displayAboutText = () => {
     const aboutText = document.createElement('div');
     aboutText.setAttribute('id', 'about');
     aboutText.innerHTML = 
-                `It’s true that The Marans is a restaurant paradox. It is only 650 sq ft. The kitchen has no commercial cooking equipment. And yet, on any given evening, a passerby can smell curry on the air, see the chandeliers glow on the sidewalk and hear the laughter and banter of the patrons inside. It is a small restaurant that has created a large presence.<br><br>
+                `<strong>It’s true that The Marans is a restaurant paradox.</strong> It is only 650 sq ft. The kitchen has no commercial cooking equipment. And yet, on any given evening, a passerby can smell curry on the air, see the chandeliers glow on the sidewalk and hear the laughter and banter of the patrons inside. It is a small restaurant that has created a large presence.<br><br>
                 Tucked in next to the historic Regent Theatre right in the heart of Picton, The Marans has felt at home as soon as the doors opened in March 2019. It is a restaurant that serves Internationally inspired dishes, prepared with local flare, using fresh local ingredients.`
     promoText.appendChild(aboutText);
 };

@@ -1,5 +1,6 @@
 body {
     margin-bottom: 40px;
+    font-family: 'GFS Didot', serif !important;
 }
 
 main {
@@ -19,10 +20,12 @@ main {
     background: transparent;
     border: none;
     border-bottom: 5px transparent solid;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 24px;
+    letter-spacing: 1px;
     font-weight: 700;
     cursor: pointer;
+    font-family: 'GFS Didot', serif !important;
 }
 
 .tab:hover {
