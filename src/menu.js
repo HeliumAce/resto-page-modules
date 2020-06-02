@@ -18,7 +18,6 @@ const updateMainContent = () => {
     createMenuGrid();
     buildMenu();
     addCurrentMenu();
-    setMenuStyles();
 }
 
 const createMenuGrid = () => {
