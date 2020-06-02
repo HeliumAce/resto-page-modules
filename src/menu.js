@@ -48,7 +48,7 @@ const buildMenu = () => {
 };
 
 const addCurrentMenu = () => {
-    const menuCats = ['breakfast', 'lunch', 'lunch', 'drinks']
+    const menuCats = ['breakfast', 'lunch', 'sides', 'drinks']
     for ( let i = 0; i < menuCats.length; i++ ) {
         let currentCat = document.createElement('div');
         currentCat.setAttribute('id', menuCats[i]);

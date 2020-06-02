@@ -20,9 +20,9 @@ const createDivs = () => {
 };
 
 const displayHeader = () => {
-    logo.style.height = '160px';
+    logo.style.height = '220px';
     logo.style.display = 'block';
-    logo.style.margin = '40px auto';
+    logo.style.margin = '20px auto';
     addTabs();
 };
 

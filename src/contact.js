@@ -22,10 +22,10 @@ const updateMainContent = () => {
 
 const addContactInfo = () => {
     contactInfo.innerHTML =
-                    `<p><strong>THE MARANS DINE BAR</strong><br>
-                    222 Main St<br>
+                    `<p><strong>JONI\'S COUNTY CAFE</strong><br>
+                    222 Fake St<br>
                     Picton, ON<br>
-                    K0K 2T0</p>
+                    ABC DEF</p>
                     <p><strong>OPEN: </strong>WEDNESDAY-SUNDAY 2PM TO 8PM</p>
                     <p><strong>Phone: </strong>555-555-5555</p>
                     <p><strong>Please fill out the form below</strong> with your inquiry and we'll be in touch</p>`
