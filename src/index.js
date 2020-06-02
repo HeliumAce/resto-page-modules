@@ -1,42 +1,36 @@
+import { loadSite } from './loader'
 import { displayAbout } from './about'
 import { displayMenu } from './menu'
+import { displayContact } from './contact'
 
+loadSite();
 displayAbout();
-//displayMenu();
 
-const addTabs = () => {
-    const header = document.getElementById('header');
-    const tabs = document.createElement('nav');
-    const about = document.createElement('button');
-    const menu = document.createElement('button');
-    const contact = document.createElement('button');
-    
-    header.appendChild(tabs);
-    tabs.appendChild(about);
-    tabs.appendChild(menu);
-    tabs.appendChild(contact);
-
-    about.innerHTML = 'About';
-    menu.innerHTML = 'Menu';
-    contact.innerHTML = 'Contact';
-
-    tabs.setAttribute('id', 'nav');
-    about.setAttribute('id', 'about');
-    menu.setAttribute('id', 'menu');
-    contact.setAttribute('id', 'contact');
+const addTabLogic = () => {
+    const tabs = document.getElementById('nav');
     const currentNav = tabs.getElementsByTagName('button');
     for (let i = 0; i < currentNav.length; i++) {
         currentNav[i].setAttribute('class', 'tab');
         currentNav[i].addEventListener('click', (e) => {
-            switchTab();
-            console.log(i.id);
+            switchTab(i);
         });
     };
 
 }
 
-const switchTab = (e) => {
-    
-}
+const switchTab = (i) => {
+    //console.log(i);
+    switch (i) {
+        case 0:
+            displayAbout();
+            break;
+        case 1:
+            displayMenu();
+            break;
+        case 2:
+            displayContact();
+            break;
+    }
+};
 
-addTabs();
+addTabLogic();

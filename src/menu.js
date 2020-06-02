@@ -1,9 +1,15 @@
+const currentMenu = [];
+
 const displayMenu = () => {
     clearMainContent();
     updateMainContent();
 };
 
 const clearMainContent = () => {
+    let updateMenu = currentMenu.length
+    for (let i = 0; i <= updateMenu; i++) {
+        currentMenu.pop();
+    };
     const main = document.getElementById('main');
     main.innerHTML = '';
 }
@@ -28,8 +34,10 @@ const addCurrentMenu = () => {
     const schnitzel = MenuItem('schnitzel on a bun', '$10', 'Sugar Shack pork schnitzel, grainy mustard, mixed greens');
     const deli = MenuItem('the marans deli sandwich', '$10', 'Selection of soft and hard cured meats, mustard aioli, mixed greens');
     const tomato = MenuItem('toasted tomato and brie', '$10', 'Vine-ripened tomato, Brie, soy ginger vinaigrette, mixed greens');
+    const cheese = MenuItem('grilled cheese', '$8', 'All the cheese');
+    const ham = MenuItem('ham', '$8', 'All the ham');
     
-    currentMenu.push(schnitzel, deli, tomato);
+    currentMenu.push(schnitzel, deli, tomato, cheese, ham);
 
     for ( let i = 0; i < currentMenu.length; i++ ) {
         currentMenu[i].render();
@@ -37,7 +45,7 @@ const addCurrentMenu = () => {
 }
 
 const setMenuStyles = () => {
-    console.log('styles coming soon')
+    //console.log('styles coming soon')
 };
 
 const MenuItem = (name, price, description) => {
@@ -66,7 +74,5 @@ const MenuItem = (name, price, description) => {
 
     return { render };
 };
-
-const currentMenu = [];
 
 export { displayMenu };

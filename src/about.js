@@ -1,49 +1,34 @@
 const displayAbout = () => {
-    createDivs();
-    displayHeader();
-    displayMainContent();
+    clearMainContent();
+    updateMainContent();
 };
 
-const createDivs = () => {
-    const content = document.getElementById('content');
-    const header = document.createElement('header');
-    const logo = document.createElement('img');
-    const main = document.createElement('main');
-    const promoImage = document.createElement('img');
-    const promoText = document.createElement('div');
-
-    header.setAttribute('id', 'header');
-    logo.setAttribute('id', 'logo');
-    logo.setAttribute('src', '../imgs/logo.png');
-    main.setAttribute('id', 'main');
-    promoImage.setAttribute('id', 'promoImage');
-    promoImage.setAttribute('src', '../imgs/promoImage.jpg');
-    promoText.setAttribute('id', 'promoText');
-    
-    content.appendChild(header);
-    header.appendChild(logo);
-    content.appendChild(main);
-    main.appendChild(promoImage);
-    main.appendChild(promoText);
-
+const clearMainContent = () => {
+    const main = document.getElementById('main');
+    main.innerHTML = '';
 };
 
-const displayHeader = () => {
-    logo.style.height = '160px';
-    logo.style.display = 'block';
-    logo.style.margin = '60px auto';
-};
-
-const displayMainContent = () => {
-    promoImage.style.display = 'block';
-    promoImage.style.margin = '20px auto';
+const updateMainContent = () => {
+    displayPromoImage();
     displayQuotes();
     displayAboutText();
 };
 
+const displayPromoImage = () => {
+    const promoImage = document.createElement('img');
+    promoImage.setAttribute('id', 'promoImage');
+    promoImage.setAttribute('src', '../imgs/promoImage.jpg');
+    main.appendChild(promoImage);
+    promoImage.style.display = 'block';
+    promoImage.style.margin = '20px auto';
+};
+
 const displayQuotes = () => {
-    const quotes = document.createElement('div')
+    const promoText = document.createElement('div');
+    const quotes = document.createElement('div');
+    promoText.setAttribute('id', 'promoText');
     quotes.setAttribute('id', 'quotes');
+    
     quotes.innerHTML = 
             `“It’s only twenty seats, how hard could it be?”<br>
             “How do you get such wonderful flavours in such a small kitchen?”<br>
@@ -53,8 +38,10 @@ const displayQuotes = () => {
     quotes.style.textAlign = 'center';
     quotes.style.lineHeight = '32px';
     quotes.style.margin = '40px 0';
+    
+    main.appendChild(promoText);
     promoText.appendChild(quotes);
-}
+};
 
 const displayAboutText = () => {
     const aboutText = document.createElement('div');
@@ -68,7 +55,6 @@ const displayAboutText = () => {
     aboutText.style.lineHeight = '32px';
     aboutText.style.margin = '40px auto';
     promoText.appendChild(aboutText);
+};
 
-}
-
-export { displayAbout  };
+export { displayAbout };
