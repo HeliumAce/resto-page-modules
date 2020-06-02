@@ -24,12 +24,17 @@ const updateMainContent = () => {
 const createMenuGrid = () => {
     const menu = document.createElement('div');
     menu.setAttribute('id', 'menu');
-    menu.style.display = 'grid';
-    menu.style.gridAutoRows = 'auto';
-    menu.style.gridGap = '20px';
-    menu.style.justifyContent = 'center';
     main.appendChild(menu);
 }
+
+const buildMenu = () => {
+    const schnitzel = MenuItem('small plates', 'schnitzel on a bun', '$10', 'Sugar Shack pork schnitzel, grainy mustard, mixed greens');
+    const deli = MenuItem('small plates', 'the marans deli sandwich', '$10', 'Selection of soft and hard cured meats, mustard aioli, mixed greens');
+    const tomato = MenuItem('sandwiches', 'toasted tomato and brie', '$10', 'Vine-ripened tomato, Brie, soy ginger vinaigrette, mixed greens');
+    const cheese = MenuItem('sandwiches', 'grilled cheese', '$8', 'All the cheese');
+    const ham = MenuItem('sides', 'ham', '$8', 'All the ham');    
+    currentMenu.push(schnitzel, deli, tomato, cheese, ham);
+};
 
 const addCurrentMenu = () => {
     const menuCats = ['small plates', 'sandwiches', 'sides']
@@ -43,25 +48,12 @@ const addCurrentMenu = () => {
     }
 }
 
-const buildMenu = () => {
-    const schnitzel = MenuItem('small plates', 'schnitzel on a bun', '$10', 'Sugar Shack pork schnitzel, grainy mustard, mixed greens');
-    const deli = MenuItem('small plates', 'the marans deli sandwich', '$10', 'Selection of soft and hard cured meats, mustard aioli, mixed greens');
-    const tomato = MenuItem('sandwiches', 'toasted tomato and brie', '$10', 'Vine-ripened tomato, Brie, soy ginger vinaigrette, mixed greens');
-    const cheese = MenuItem('sandwiches', 'grilled cheese', '$8', 'All the cheese');
-    const ham = MenuItem('sides', 'ham', '$8', 'All the ham');    
-    currentMenu.push(schnitzel, deli, tomato, cheese, ham);
-}
-
 const appendMenuItems = (currentCat) => {
     for ( let i = 0; i < currentMenu.length; i++ ) {  
         if (currentCat.id === currentMenu[i].getCategory()) {
             currentMenu[i].render();
         }
     }
-};
-
-const setMenuStyles = () => {
-    //console.log('styles coming soon')
 };
 
 const MenuItem = (category, name, price, description) => {
@@ -72,11 +64,10 @@ const MenuItem = (category, name, price, description) => {
         const itemPrice = document.createElement('div');
         const itemDescription = document.createElement('div');
 
-        item.setAttribute('id', 'menuItem');
-        item.setAttribute('class', category);
-        itemName.setAttribute('id', 'itemName');
-        itemPrice.setAttribute('id', 'itemPrice');
-        itemDescription.setAttribute('id', 'itemDescription');
+        item.setAttribute('class', 'menuItem');
+        itemName.setAttribute('class', 'itemName');
+        itemPrice.setAttribute('class', 'itemPrice');
+        itemDescription.setAttribute('class', 'itemDescription');
 
         itemName.innerHTML = name;
         itemPrice.innerHTML = price;
