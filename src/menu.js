@@ -27,16 +27,28 @@ const createMenuGrid = () => {
 }
 
 const buildMenu = () => {
-    const schnitzel = MenuItem('small plates', 'schnitzel on a bun', '$10', 'Sugar Shack pork schnitzel, grainy mustard, mixed greens');
-    const deli = MenuItem('small plates', 'the marans deli sandwich', '$10', 'Selection of soft and hard cured meats, mustard aioli, mixed greens');
-    const tomato = MenuItem('sandwiches', 'toasted tomato and brie', '$10', 'Vine-ripened tomato, Brie, soy ginger vinaigrette, mixed greens');
-    const cheese = MenuItem('sandwiches', 'grilled cheese', '$8', 'All the cheese');
-    const ham = MenuItem('sides', 'ham', '$8', 'All the ham');    
-    currentMenu.push(schnitzel, deli, tomato, cheese, ham);
+    const pancakes = MenuItem('breakfast', 'Chocolate Pancakes', '$12', 'Jumbo chocolate chips nestled deep in fluffy, gooey, pancake-y goodness');
+    const granola = MenuItem('breakfast', 'Mommy\'s Yogurt and Granola', '$10', 'Homemade crunchy, sweet granola smothered in creamy vanilla yogurt');
+    const eggs = MenuItem('breakfast', 'Facon and Eggs', '$12', 'Crispy veggie "Facon" and eggs any way you like \'em');
+    const mac = MenuItem('lunch', 'Mac and Cheese', '$8', 'The classic. Macaroni noodles drenched in all the cheese');
+    const pizza = MenuItem('lunch', 'Mushroom Pizza', '$12', 'All the "fun guys" you can imagine sandwiched between tomato sauce and cheese on a made in house crust');
+    const nuggets = MenuItem('lunch', '"Chicken" fingers and nuggets', '$10', 'Hot and crispy fingers and nuggets. Better than the real thing');
+    const pickles = MenuItem('sides', 'Pickles', '$5', 'Sweet and sour pickles');
+    const olives = MenuItem('sides', 'Oilves', '$5', 'Marinated to perfection and pitted for your convenience');
+    const fries = MenuItem('sides', 'French Fries', '$6', 'Classic, crispy fries with a side of ketchup and mayo');  
+    const tots = MenuItem('sides', 'Tator Tots', '$6', 'Golden, crunchy tots for when you\'ve had enough fries');  
+    const juice = MenuItem('drinks', 'Juice', '$4', 'Apple, Orange, Pinneaple');  
+    const milk = MenuItem('drinks', 'Milk', '$8', 'Straight from the cows udder');  
+    const chocSmoothie = MenuItem('drinks', 'Chocolate Smoothie', '$8', 'Chocolate, PB, banana. Can\'t beat it');  
+    const fruitSmoothie = MenuItem('drinks', 'Fruit Smoothie', '$8', 'Berries, spinach, yogurt, avocado, yum');  
+    const beer = MenuItem('drinks', 'Beer (for Dad)', '$7', 'A selection of local craft faves');         
+    
+    
+    currentMenu.push(pancakes, granola, eggs, mac, pizza, nuggets, pickles, olives, fries, tots, juice, milk, chocSmoothie, fruitSmoothie, beer);
 };
 
 const addCurrentMenu = () => {
-    const menuCats = ['small plates', 'sandwiches', 'sides']
+    const menuCats = ['breakfast', 'lunch', 'lunch', 'drinks']
     for ( let i = 0; i < menuCats.length; i++ ) {
         let currentCat = document.createElement('div');
         currentCat.setAttribute('id', menuCats[i]);
