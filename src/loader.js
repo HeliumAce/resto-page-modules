@@ -22,7 +22,7 @@ const createDivs = () => {
 const displayHeader = () => {
     logo.style.height = '160px';
     logo.style.display = 'block';
-    logo.style.margin = '60px auto';
+    logo.style.margin = '40px auto';
     addTabs();
 };
 
@@ -37,14 +37,26 @@ const addTabs = () => {
     tabs.appendChild(menu);
     tabs.appendChild(contact);
 
-    about.innerHTML = 'About';
-    menu.innerHTML = 'Menu';
-    contact.innerHTML = 'Contact';
+    about.innerHTML = 'ABOUT US';
+    menu.innerHTML = 'MENU';
+    contact.innerHTML = 'CONTACT';
 
     tabs.setAttribute('id', 'nav');
     about.setAttribute('id', 'aboutTab');
     menu.setAttribute('id', 'menuTab');
     contact.setAttribute('id', 'contactTab');
+    
+    addTabClass();
+}
+
+const addTabClass = () => {
+    const nav = document.getElementById('nav');
+    const tabs = nav.getElementsByTagName('button');
+
+    for (let i = 0; i < tabs.length; i++) {
+        let currentTab = tabs[i]
+        currentTab.setAttribute('class', 'tab');
+    }
 }
 
 export { loadSite  };

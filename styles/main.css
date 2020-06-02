@@ -1,0 +1,24 @@
+#nav {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.tab {
+    margin: 0 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 5px transparent solid;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tab:hover {
+    border-bottom: 5px black solid;
+}
+
+.tab:focus {
+    outline: transparent;
+}
