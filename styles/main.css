@@ -1,0 +1,153 @@
+body {
+    margin-bottom: 40px;
+    font-family: 'GFS Didot', serif !important;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+    grid-gap: 20px;
+}
+
+#nav {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.tab {
+    margin: 0 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 5px transparent solid;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'GFS Didot', serif !important;
+}
+
+.tab:hover {
+    border-bottom: 5px black solid;
+}
+
+.tab:focus {
+    outline: transparent;
+}
+
+#promoImage {
+    max-width: 960px;
+    grid-column: 1 / span 3;
+    margin: 0 auto;   
+} 
+
+#promoText {
+    grid-column: 2 / span 1;
+}
+
+#quotes {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    line-height: 32px;
+    margin: 40px 0;
+}
+
+#about {
+    font-size: 17px;
+    max-width: 600px;
+    display: block;
+    line-height: 32px;
+    margin: 40px auto;
+}
+
+#menu {
+ grid-column: 2 / span 1;
+ display: grid;
+ grid-auto-rows: auto;
+ grid-gap: 20px;
+}
+
+.menuCat {
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 0;
+    text-align: center;    
+}
+
+.menuItem {
+    display: grid;
+    min-height: 60px;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 60% 40%;
+    margin-bottom: 40px;
+}
+
+.itemName {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.itemPrice {
+    grid-column: 2 / span 1;
+    justify-self: end;
+    
+}
+
+.itemDescription {
+    grid-row: 2 / span 1;
+}
+
+#contactInfo, #contactForm {
+    margin: 0 120px;
+}
+
+#contactInfo {
+    grid-column: 2 / span 1;
+    margin-bottom: 60px;
+    line-height: 40px;
+}
+
+#contactInfo > p {
+    margin-bottom: 28px;
+}
+
+#contactForm {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: 8px;
+}
+
+label {
+    font-weight: 800;
+}
+
+input, textarea {
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+#contactButton {
+    width: 100px;
+    background-color: #303030;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 24px;
+}
+
+strong {
+    font-weight: 600;
+}
