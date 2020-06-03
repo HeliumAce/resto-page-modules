@@ -17,7 +17,7 @@ const updateMainContent = () => {
 const displayPromoImage = () => {
     const promoImage = document.createElement('img');
     promoImage.setAttribute('id', 'promoImage');
-    promoImage.setAttribute('src', '../imgs/promoImage.jpg');
+    promoImage.setAttribute('src', '../src/imgs/promoImage.jpg');
     main.appendChild(promoImage);
 };
 
