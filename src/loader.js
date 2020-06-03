@@ -11,7 +11,7 @@ const createDivs = () => {
 
     header.setAttribute('id', 'header');
     logo.setAttribute('id', 'logo');
-    logo.setAttribute('src', 'imgs/logo.png');
+    logo.setAttribute('src', '../dist/imgs/logo.png');
     main.setAttribute('id', 'main');
     
     content.appendChild(header);
