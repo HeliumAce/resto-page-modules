@@ -11,7 +11,7 @@ const createDivs = () => {
 
     header.setAttribute('id', 'header');
     logo.setAttribute('id', 'logo');
-    logo.setAttribute('src', '../dist/imgs/logo.png');
+    logo.setAttribute('src', 'https://raw.githubusercontent.com/HeliumAce/resto-page-modules/gh-pages/imgs/logo.png');
     main.setAttribute('id', 'main');
     
     content.appendChild(header);

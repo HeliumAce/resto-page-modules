@@ -17,7 +17,7 @@ const updateMainContent = () => {
 const displayPromoImage = () => {
     const promoImage = document.createElement('img');
     promoImage.setAttribute('id', 'promoImage');
-    promoImage.setAttribute('src', '../dist/imgs/promoImage.jpg');
+    promoImage.setAttribute('src', 'https://raw.githubusercontent.com/HeliumAce/resto-page-modules/gh-pages/imgs/promoImage.jpg');
     main.appendChild(promoImage);
 };
 
